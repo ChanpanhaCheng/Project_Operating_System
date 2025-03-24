@@ -9,15 +9,15 @@ echo "Input your choice: "
 
 if [ -e "$choice" ];  then
     # shellcheck disable=SC1009
-    if [ -f "$choice" ]; then
-    ls -lth "$choice"
+    # if [ -f "$choice" ]; then
+    # ls -lth "$choice"
     
-    elif [ -d "$choice" ]; then
+    # elif [ -d "$choice" ]; then
     ls -lth "$choice"
    
-    else 
-    echo "$choice is kinda other file type."
-    fi 
+    # else 
+    # echo "$choice is kinda other file type."
+    # fi 
 else 
     echo "$choice can not be found."
     fi

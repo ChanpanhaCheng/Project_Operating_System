@@ -1,82 +1,17 @@
 #!/bin/bash
 
-log_file="script.log"
-
-# Function to list files and directories
-list_files() {
-    if [ -d "$1" ]; then
-        echo "Listing files and directories in: $1"
-        ls -l "$1"
-    else
-        echo "Error: Directory '$1' not found!"
-    fi
+# Source all the function files
+function list_file(){
+    source ./List_Files.sh
 }
-
-# Function to create a backup
-backup() {
-    echo "Enter the file/directory to backup:"
-    read source
-    echo "Enter the destination for the backup:"
-    read destination
-
-    if [ -e "$source" ]; then
-        cp -r "$source" "$destination"
-        echo "Backup completed!"
-    else
-        echo "Error: '$source' not found!"
-    fi
+function backup(){
+    source ./Backup_File.sh
 }
-
-# Function to count files
-count_files() {
-    if [ -d "$1" ]; then
-        echo "Number of files in $1:"
-        find "$1" -type f | wc -l
-    else
-        echo "Error: Directory '$1' not found!"
-    fi
-}
-
-# Function to display disk usage
-disk_usage() {
-    if [ -d "$1" ]; then
-        echo "Disk usage of $1:"
-        du -sh "$1"
-    else
-        echo "Error: Directory '$1' not found!"
-    fi
-}
-
-# Function to search for a file
-search_file() {
-    echo "Enter file name or extension to search:"
-    read pattern
-    result=$(find . -name "*$pattern*")
-
-    if [ -n "$result" ]; then
-        echo "$result"
-    else
-        echo "Error: No files found matching '$pattern'!"
-    fi
-}
-
-# Function to compress files
-compress() {
-    echo "Enter file/directory to compress:"
-    read target
-
-    if [ -e "$target" ]; then
-        tar -czvf "$target.tar.gz" "$target"
-        echo "Compression completed!"
-    else
-        echo "Error: '$target' not found!"
-    fi
-}
-
-# Function to log actions
-log_action() {
-    echo "$(date): $1" >> "$log_file"
-}
+source ./Count_Files.sh
+source ./Disk_Usage.sh
+source ./Search_File.sh
+source ./Compress.sh
+source ./Log_action.sh
 
 # Main menu
 while true; do

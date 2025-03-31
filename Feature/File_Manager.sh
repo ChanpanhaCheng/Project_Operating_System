@@ -1,12 +1,8 @@
 #!/bin/bash
 
 # Source all the function files
-function list_file(){
-    source ./List_Files.sh
-}
-function backup(){
-    source ./Backup_File.sh
-}
+source ./List_Files.sh
+source ./Backup_File.sh
 source ./Count_Files.sh
 source ./Disk_Usage.sh
 source ./Search_File.sh

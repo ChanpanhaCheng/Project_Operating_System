@@ -1,23 +1,11 @@
-#! /bin/bash
-echo "Hello Dear wanna see files and sub-directories from directory or file"
+#!/bin/bash
 
-echo "Input your choice: "
- # shellcheck disable=SC2162
- read choice
-
-
-
-if [ -e "$choice" ];  then
-    # shellcheck disable=SC1009
-    # if [ -f "$choice" ]; then
-    # ls -lth "$choice"
-    
-    # elif [ -d "$choice" ]; then
-    ls -lth "$choice"
-   
-    # else 
-    # echo "$choice is kinda other file type."
-    # fi 
-else 
-    echo "$choice can not be found."
+# Function to list files and directories
+list_files() {
+    if [ -d "$1" ]; then
+        echo "Listing files and directories in: $1"
+        ls -l "$1"
+    else
+        echo "Error: Directory '$1' not found!"
     fi
+}

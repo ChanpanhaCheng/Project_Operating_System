@@ -1,16 +1,16 @@
-#! /bin/bash
-echo "Please input name of the file or directory you want to backup"
-read check
-if [ -e "$check" ]; then
-echo "Pick directroy to store the backup "
-read location
+#!/bin/bash
 
-if [ ! -d "$location" ]; then
-mkdir -p "$location"
-fi
+# Function to create a backup
+backup() {
+    echo "Enter the file/directory to backup:"
+    read source
+    echo "Enter the destination for the backup:"
+    read destination
 
-cp -r "$check" "$location/"
-echo "Back up in "$check" is complete  and store in "$location/$check .""
-else
-echo "file or directory can not be found"
-fi
+    if [ -e "$source" ]; then
+        cp -r "$source" "$destination"
+        echo "Backup completed!"
+    else
+        echo "Error: '$source' not found!"
+    fi
+}

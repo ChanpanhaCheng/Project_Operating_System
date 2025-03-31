@@ -51,11 +51,11 @@ It includes multiple functions for handling files and directories, along with a 
     ./file_manager.sh
 
     - You will need to create some files and directory for testing.
-    ``
+    ```bash
     touch test.txt
     echo "Test file" > test.txt
     mkdir backup
-    touch test1.txt && touch test2.txt ``
+    touch test1.txt && touch test2.txt
 
 
 

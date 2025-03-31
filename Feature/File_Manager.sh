@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Source all the function files
-source ./List_Files.sh
+source ./List_File.sh
 source ./Backup_File.sh
-source ./Count_Files.sh
+source ./Count_File.sh
 source ./Disk_Usage.sh
 source ./Search_File.sh
 source ./Compress.sh

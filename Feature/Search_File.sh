@@ -1,11 +1,14 @@
 #!/bin/bash
 
-# Function to display disk usage
-disk_usage() {
-    if [ -d "$1" ]; then
-        echo "Disk usage of $1:"
-        du -sh "$1"
+# Function to search for a file
+search_file() {
+    echo "Enter file name or extension to search:"
+    read pattern
+    result=$(find . -name "*$pattern*")
+
+    if [ -n "$result" ]; then
+        echo "$result"
     else
-        echo "Error: Directory '$1' not found!"
+        echo "Error: No files found matching '$pattern'!"
     fi
 }

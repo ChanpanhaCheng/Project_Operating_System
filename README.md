@@ -1,39 +1,61 @@
-# Project_Operating_System
+# Project: Operating System  
+## File and Directory Management Program  
 
-# File and Directory Management Program
+### 📌 Overview  
+This Bash script allows users to efficiently manage files and directories.  
+It includes multiple functions for handling files and directories, along with a logging system to track user actions.  
 
-## Overview  
-This Bash script allows users to manage files and directories efficiently.
-There are some of its functions which allow users to manage it on directory/file and a script which track user action.  
+---
 
-## Features  
-- List files and directories  
-    When input directory, it will display all files and directory in the input file.
-- Create backups  
-    This feature will create the copy of the input content into another file. 
-- Count files in a directory 
-    It will count the number of directory/file in the folder.
-- Display disk usage  
-    This funtion will display the number of memory of the directory.
-- Search for files  
-    You can search any file and it will display the path of the file.
-- Compress files  
-    It will compress the directory.
-- Log user actions  
-    Script.log store all the actions of user commands.
+## ⚙️ Features  
+✅ **List Files and Directories**  
+   - Displays all files and subdirectories in a specified directory.  
 
-## Installation  
-1. Clone the repository:  
-   ```bash
-   git clone <repo-url>
+✅ **Create Backups**  
+   - Copies the specified file or directory to another location.  
 
-2. In terminal:
+✅ **Count Files in a Directory**  
+   - Counts the total number of files in a specified directory.  
+
+✅ **Display Disk Usage**  
+   - Shows the total memory usage of a directory.  
+
+✅ **Search for Files**  
+   - Searches for files by name or extension and displays their paths.  
+
+✅ **Compress Files**  
+   - Compresses a specified file or directory into a `.tar.gz` archive.  
+
+✅ **Log User Actions**  
+   - Stores all user actions in `script.log` for tracking and debugging.  
+
+---
+
+## 🛠 Installation  
+ 
+1. Run the following command in your terminal:  
+    ```bash
+    git clone <repo-url>
+
+2. In terminal
+    - To write bash file:
     ```bash
     nano file_manager.sh
 
-3. You will need to create some files and directory for testing.
+    - To excecute:
     ```bash
+    chmod +x file_manager.sh
+
+    - To run: 
+    ```bash
+    ./file_manager.sh
+
+    - You will need to create some files and directory for testing.
+    ``
     touch test.txt
     echo "Test file" > test.txt
     mkdir backup
-    touch test1.txt && touch test2.txt
+    touch test1.txt && touch test2.txt ``
+
+
+

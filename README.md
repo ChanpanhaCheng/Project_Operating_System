@@ -38,19 +38,19 @@ It includes multiple functions for handling files and directories, along with a 
     git clone <repo-url>
 
 2. In terminal
-    - To write bash file:
+- To write bash file:
     ```bash
     nano file_manager.sh
 
-    - To excecute:
+- To excecute:
     ```bash
     chmod +x file_manager.sh
 
-    - To run: 
+- To run: 
     ```bash
     ./file_manager.sh
 
-    - You will need to create some files and directory for testing.
+- You will need to create some files and directory for testing.
     ```bash
     touch test.txt
     echo "Test file" > test.txt
